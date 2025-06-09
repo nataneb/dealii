@@ -182,6 +182,14 @@ private:
   get_dpo_vector(const unsigned int degree);
 
   /**
+   * Compute the lexicographic to hierarchic numbering underlying this class,
+   * computed as a free function.
+   */
+  std::vector<unsigned int>
+  get_lexicographic_numbering(const unsigned int normal_degree,
+                              const unsigned int tangential_degree) const;
+
+  /**
    * Initialize the @p generalized_support_points field of the FiniteElement
    * class and fill the tables with interpolation weights (#boundary_weights
    * and #interior_weights). Called from the constructor.
@@ -409,6 +417,14 @@ private:
   virtual bool
   has_support_on_face(const unsigned int shape_index,
                       const unsigned int face_index) const override;
+
+  /**
+   * Compute the lexicographic to hierarchic numbering underlying this class,
+   * computed as a free function.
+   */
+  std::vector<unsigned int>
+  get_lexicographic_numbering(const unsigned int normal_degree,
+                              const unsigned int tangential_degree) const;
 
   /**
    * Initialize the permutation pattern and the pattern of sign change.
