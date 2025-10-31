@@ -427,8 +427,6 @@ FE_NedelecNodal<dim>::compare_for_domination(const FiniteElement<dim> &fe_other,
 }
 
 
-// Required for UnivariateShapeData from shape_info.
-#include "matrix_free/shape_info.inst"
 // explicit instantiations
 #include "fe/fe_nedelec_nodal.inst"
 
