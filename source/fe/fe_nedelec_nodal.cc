@@ -26,6 +26,8 @@
 #include <deal.II/fe/fe_tools.h>
 #include <deal.II/fe/mapping.h>
 
+#include <deal.II/matrix_free/shape_info.templates.h>
+
 #include <memory>
 #include <sstream>
 
@@ -425,9 +427,11 @@ FE_NedelecNodal<dim>::compare_for_domination(const FiniteElement<dim> &fe_other,
 }
 
 
-
+// Required for UnivariateShapeData from shape_info
+#include "matrix_free/shape_info.inst"
 // explicit instantiations
 #include "fe/fe_nedelec_nodal.inst"
+
 
 
 DEAL_II_NAMESPACE_CLOSE

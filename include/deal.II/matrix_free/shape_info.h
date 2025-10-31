@@ -139,10 +139,7 @@ namespace internal
     template <typename Number>
     struct UnivariateShapeData
     {
-      /**
-       * Empty constructor. Sets default configuration.
-       */
-      UnivariateShapeData();
+      It 
 
       /**
        * Return the memory consumption of this class in bytes.
